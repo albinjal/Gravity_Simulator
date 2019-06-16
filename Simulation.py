@@ -41,7 +41,7 @@ if __name__ == "__main__":
     init_image = SpaceImage([earth, moon])
     axises = [-420000000, 420000000.0, -420000000.0, 420000000.0]
     seconds_frame = 60 * 60
-    frames = 685
+    frames = 686
     gif_name = input('simulation name: ')
     save_indata(gif_name, [earth, moon], frames, seconds_frame)
     simulate(init_image, seconds_frame, frames, gif_name, axises)
