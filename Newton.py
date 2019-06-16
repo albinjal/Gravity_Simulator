@@ -1,6 +1,6 @@
 from basic_linalg import *
-import imageio
 import matplotlib.pyplot as plt
+import math
 G = 6.674 * 10 ** (-11)
 
 
@@ -71,13 +71,18 @@ class SpaceImage:
 
     def save(self, file_name, axis, second):
         plt.axis(axis)
-        plt.title('%i seconds' % second)
+        plt.gca().set_aspect('equal', adjustable='box')
+        plt.title('Day: %d, Hour: %d' % (
+        math.floor(second / 60 / 60 / 24), second / 60 / 60 - math.floor(second / 60 / 60 / 24) * 24))
+        plt.xlabel('Meters')
+        plt.ylabel('Meters')
         for body in self.bodies:
             plt.scatter(body.position[0], body.position[1], body.diameter/10**5, edgecolors='none')
             if vector_length(body.applied_force) and vector_length(body.velocity) != 0:
                 plt.quiver(body.position[0], body.position[1], body.applied_force[0], body.applied_force[1],
-                           color=['r'], scale_units='height')
-                plt.quiver(body.position[0], body.position[1], body.velocity[0], body.velocity[1], color=['b'])
+                           color=['r'], scale=3 * 10 ** 21)
+                plt.quiver(body.position[0], body.position[1], body.velocity[0], body.velocity[1], color=['b'],
+                           scale=10000)
         plt.savefig(file_name, bbox_inches='tight')
         plt.clf()
         return file_name
