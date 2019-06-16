@@ -26,6 +26,14 @@ Seconds/Frame: 3600 (1 Hour / Frame),
 | Mass          | 6 * 10 ** 24  |7.3 * 10 ** 22 |
 
 
-
+## Run ##
+1. Clone this repo
+2. Make sure your python env has the required dependencies, otherwise install with pip install <Package>
+    * imageio
+    * typing
+    * matplotlib
+3. Configure setting and indata in Simulation.py
+4. Run Simulation.py with: Python3 Simulation.py
+5. Simulation gif should be in the "Gifs" folder
 
 This project was made to practice object oriented programming in Python.
