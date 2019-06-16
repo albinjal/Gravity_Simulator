@@ -1,4 +1,7 @@
-/frames
-/gifs
-/indata
+frames/*
+gifs/*
+indata/*
+!frames/.gitkeep
+!gifs/.gitkeep
+!indata/.gitkeep
 /.idea
