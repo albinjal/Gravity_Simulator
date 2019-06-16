@@ -3,14 +3,17 @@ My attemt at simulating gravity via classical mechanics and specificly [Newtons 
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/48f74b3b4d591ba1996c4d481f74ac3ab7e279d7)
 
-## Example
+### Example
 ![](/moon_and_earth.gif)
 
-Indata : 
+This Gif shows a simulated trip for the moon (orange) around the earth (blue).
+The red vector shows the direction of the applied force while the blue one shows the velocity of the object. 
+
+**Config :** 
 Frames: 686,
 Seconds/Frame: 3600
 
-Objects:
+**Objects:**
 
 | Data          | Earth         | Moon          |
 | ------------- |:-------------:| ----------:   |
@@ -20,3 +23,7 @@ Objects:
 | Y-Vel         | 0             |    0          |
 | Mass          | 6 * 10 ** 24  |7.3 * 10 ** 22 |
 
+
+
+
+This project was made to practice object oriented programming in Python.
