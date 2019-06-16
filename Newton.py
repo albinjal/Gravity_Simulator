@@ -24,6 +24,10 @@ class Body:
         self.applied_force = applied_force
         self.acceleration = acceleration
 
+    def disp(self):
+        return ('Name: %s, Position: [%f,%f], Velocity: [%f,%f], Mass: %f \n') % (
+        self.name, self.position[0], self.position[1], self.velocity[0], self.velocity[1], self.mass)
+
 
 def calculate_force(obj1: Body, obj2: Body) -> Vector:
     force_direction = vector_addition(obj2.position, vector_multiplication_by_k(-1.0, obj1.position))
@@ -65,12 +69,14 @@ class SpaceImage:
         for body in self.bodies:
             plt.scatter(body.position[0], body.position[1], body.diameter/10**5, edgecolors='none')
 
-    def save(self, file_name, axis):
+    def save(self, file_name, axis, second):
         plt.axis(axis)
+        plt.title('%i seconds' % second)
         for body in self.bodies:
             plt.scatter(body.position[0], body.position[1], body.diameter/10**5, edgecolors='none')
             if vector_length(body.applied_force) and vector_length(body.velocity) != 0:
-                plt.quiver(body.position[0], body.position[1], body.applied_force[0], body.applied_force[1], color=['r'])
+                plt.quiver(body.position[0], body.position[1], body.applied_force[0], body.applied_force[1],
+                           color=['r'], scale_units='height')
                 plt.quiver(body.position[0], body.position[1], body.velocity[0], body.velocity[1], color=['b'])
         plt.savefig(file_name, bbox_inches='tight')
         plt.clf()
