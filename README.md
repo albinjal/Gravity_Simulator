@@ -30,7 +30,6 @@ Seconds/Frame: 3600 (1 Hour / Frame),
 1. Clone this repo
 2. Make sure your python env has the required dependencies, otherwise install with pip install <Package>
     * imageio
-    * typing
     * matplotlib
 3. Configure setting and indata in Simulation.py
 4. Run Simulation.py with: Python3 Simulation.py
