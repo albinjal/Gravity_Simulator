@@ -6,7 +6,7 @@ My attemt at simulating gravity via classical mechanics and specificly [Newtons 
 ## Example
 Earth and Moon 28,6 Days
 
-![Earth and Moon](/moon2.mp4)
+![Earth and Moon](/moon2.gif)
 
 This Gif shows a simulated trip for the moon (orange) around the earth (blue).
 The red vector shows the direction of the applied force while the blue one shows the velocity of the object. 
