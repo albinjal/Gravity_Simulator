@@ -76,6 +76,8 @@ class SpaceImage:
         math.floor(second / 60 / 60 / 24), second / 60 / 60 - math.floor(second / 60 / 60 / 24) * 24))
         plt.xlabel('Meters')
         plt.ylabel('Meters')
+        plt.axvline(color='black')
+        plt.axhline(color='black')
         for body in self.bodies:
             plt.scatter(body.position[0], body.position[1], body.diameter/10**5, edgecolors='none')
             if vector_length(body.applied_force) and vector_length(body.velocity) != 0:

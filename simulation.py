@@ -1,6 +1,6 @@
 import imageio
 from typing import List
-from Newton import SpaceImage, Body
+from newton import SpaceImage, Body
 import sys
 
 
@@ -39,9 +39,9 @@ if __name__ == "__main__":
     earth = Body('Earth', [0.0, 0.0], 6 * 10 ** 24, [0, 0], 12742000, [0, 0], [0, 0])
     moon = Body('Moon', [0, 369671 * 1000], 7.3 * 10 ** 22, [1082, 0], 3474200, [0, 0], [0, 0])
     init_image = SpaceImage([earth, moon])
-    axises = [-420000000, 420000000.0, -420000000.0, 420000000.0]
-    seconds_frame = 60 * 60
-    frames = 686
+    axises = [-1000000000, 1000000000.0, -1000000000.0, 1000000000.0]
+    seconds_frame = 60 * 60 * 24
+    frames = 365
     gif_name = input('simulation name: ')
     save_indata(gif_name, [earth, moon], frames, seconds_frame)
     simulate(init_image, seconds_frame, frames, gif_name, axises)
