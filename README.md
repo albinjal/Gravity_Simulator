@@ -1,5 +1,5 @@
 # Gravity Simulator
-My attemt at simulating gravity via classical mechanics and specificly [Newtons law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation):
+My attemt at simulating gravity via classical mechanics and specificly [Newtons law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation) (Eulers formula):
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/48f74b3b4d591ba1996c4d481f74ac3ab7e279d7)
 
@@ -13,6 +13,7 @@ The red vector shows the direction of the applied force while the blue one shows
 
 **Config :** 
 Frames: 686,
+Steplength: 1s,
 Seconds/Frame: 60 * 60 (1 Hour / Frame),
 
 **Objects:**
@@ -30,6 +31,7 @@ Seconds/Frame: 60 * 60 (1 Hour / Frame),
   ![Earth and Moon](/moon3.gif)
    
 Frames: 365,
+Steplength: 1s,
 Seconds/Frame: 60 * 60 * 24 (1 Day / Frame),
 
 ## Run ##
