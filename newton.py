@@ -79,8 +79,9 @@ class SpaceImage:
         plt.axvline(color='black')
         plt.axhline(color='black')
         for body in self.bodies:
+            print(body.disp())
             plt.scatter(body.position[0], body.position[1], body.diameter/10**5, edgecolors='none')
-            if vector_length(body.applied_force) and vector_length(body.velocity) != 0:
+            if vector_length(body.applied_force) and vector_length(body.velocity):
                 plt.quiver(body.position[0], body.position[1], body.applied_force[0], body.applied_force[1],
                            color=['r'], scale=3 * 10 ** 21)
                 plt.quiver(body.position[0], body.position[1], body.velocity[0], body.velocity[1], color=['b'],

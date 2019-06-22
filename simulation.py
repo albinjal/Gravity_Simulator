@@ -35,13 +35,14 @@ def save_indata(name, bodies: List[Body], frames, seconds_frame):
 
 if __name__ == "__main__":
     # Example data
-    # mars = Body('Mars', [0, -3700000], 10 ** 23, [3000, 0], 8474200, [0, 0], [0, 0])
+    # moon2 = Body('Moon2', [0, -369671 * 1000], 7.3 * 10 ** 22, [-1082, 0], 3474200, [0, 0], [0, 0]
     earth = Body('Earth', [0.0, 0.0], 6 * 10 ** 24, [0, 0], 12742000, [0, 0], [0, 0])
     moon = Body('Moon', [0, 369671 * 1000], 7.3 * 10 ** 22, [1082, 0], 3474200, [0, 0], [0, 0])
     init_image = SpaceImage([earth, moon])
-    axises = [-1000000000, 1000000000.0, -1000000000.0, 1000000000.0]
-    seconds_frame = 60 * 60 * 24
-    frames = 365
+    axises = [-500000000, 500000000.0, -500000000.0, 500000000.0]
+    step_size = 1
+    seconds_frame = 60 * 60 * 10
+    frames = 70
     gif_name = input('simulation name: ')
     save_indata(gif_name, [earth, moon], frames, seconds_frame)
     simulate(init_image, seconds_frame, frames, gif_name, axises)
