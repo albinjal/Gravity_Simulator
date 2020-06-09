@@ -1,5 +1,5 @@
 # Gravity Simulator
-My attemt at simulating gravity via classical mechanics and specificly [Newtons law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation) (Eulers formula):
+My attempt at simulating gravity via classical mechanics and specifically [Newton’s law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation) (Euler’s formula):
 
 ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/48f74b3b4d591ba1996c4d481f74ac3ab7e279d7)
 
@@ -43,4 +43,4 @@ Seconds/Frame: 60 * 60 * 24 (1 Day / Frame),
 4. Run Simulation.py with: Python3 Simulation.py
 5. Simulation gif should be in the "Gifs" folder
 
-This project was made to practice object oriented programming in Python.
+This project was made to practice object-oriented programming in Python.
